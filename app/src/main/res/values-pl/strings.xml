@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lektor PDF</string>
+    <string name="open_pdf">Otwórz PDF</string>
+    <string name="empty_hint">Otwórz plik PDF i słuchaj go jak audiobooka – także przy wyłączonym ekranie.</string>
+    <string name="loading_pdf">Odczytywanie tekstu z PDF… %1$d%%</string>
+    <string name="page_info">Strona %1$d z %2$d · %3$d%%</string>
+    <string name="page_short">str. %1$d</string>
+    <string name="progress">Postęp</string>
+    <string name="play">Odtwórz</string>
+    <string name="pause">Pauza</string>
+    <string name="previous">Poprzednie zdanie</string>
+    <string name="next">Następne zdanie</string>
+    <string name="rewind">10 zdań wstecz</string>
+    <string name="forward">10 zdań do przodu</string>
+    <string name="speed">Tempo</string>
+    <string name="slower">Wolniej</string>
+    <string name="faster">Szybciej</string>
+    <string name="reading_language">Język lektora:</string>
+    <string name="voice">Głos:</string>
+    <string name="voice_default">Domyślny</string>
+    <string name="voice_online">online</string>
+    <string name="lang_auto">Automatycznie (%1$s)</string>
+    <string name="go_to_page">Przejdź do strony</string>
+    <string name="page_number_hint">1–%1$d</string>
+    <string name="app_language">Język aplikacji</string>
+    <string name="app_lang_system">Jak w systemie</string>
+    <string name="tts_settings">Ustawienia syntezy mowy</string>
+    <string name="install_voice">Zainstaluj</string>
+    <string name="sleep_timer">Wyłącznik czasowy</string>
+    <string name="sleep_off">Wyłączony</string>
+    <string name="sleep_minutes">%1$d min</string>
+    <string name="sleep_set">Czytanie zatrzyma się za %1$d min</string>
+    <string name="sleep_active">Wyłącznik czasowy: zostało %1$d min</string>
+    <string name="sleep_done">Wyłącznik czasowy – pauza</string>
+    <string name="notif_channel">Odtwarzanie</string>
+    <string name="notif_page">Strona %1$d z %2$d</string>
+    <string name="paused_unplugged">Słuchawki odłączone – pauza</string>
+    <string name="finished">Koniec książki</string>
+    <string name="err_tts_init">Nie udało się uruchomić syntezy mowy. Zainstaluj np. „Usługi mowy od Google”.</string>
+    <string name="err_tts_speak">Silnik mowy ciągle zgłasza błędy – zatrzymano</string>
+    <string name="err_missing_lang">Brak zainstalowanego głosu dla: %1$s</string>
+    <string name="err_no_text">Ten PDF nie zawiera tekstu (prawdopodobnie skan). Skany nie są obsługiwane.</string>
+    <string name="err_password">Ten PDF jest chroniony hasłem</string>
+    <string name="err_open">Nie udało się otworzyć pliku: %1$s</string>
+    <string name="err_focus">Dźwięk jest zajęty (np. trwa rozmowa)</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDF Narrator</string>
+    <string name="open_pdf">Open PDF</string>
+    <string name="empty_hint">Open a PDF file and listen to it like an audiobook — even with the screen off.</string>
+    <string name="loading_pdf">Reading text from PDF… %1$d%%</string>
+    <string name="page_info">Page %1$d of %2$d · %3$d%%</string>
+    <string name="page_short">p. %1$d</string>
+    <string name="progress">Progress</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="previous">Previous sentence</string>
+    <string name="next">Next sentence</string>
+    <string name="rewind">Back 10 sentences</string>
+    <string name="forward">Forward 10 sentences</string>
+    <string name="speed">Speed</string>
+    <string name="slower">Slower</string>
+    <string name="faster">Faster</string>
+    <string name="reading_language">Reading language:</string>
+    <string name="voice">Voice:</string>
+    <string name="voice_default">Default</string>
+    <string name="voice_online">online</string>
+    <string name="lang_auto">Automatic (%1$s)</string>
+    <string name="go_to_page">Go to page</string>
+    <string name="page_number_hint">1–%1$d</string>
+    <string name="app_language">App language</string>
+    <string name="app_lang_system">System default</string>
+    <string name="tts_settings">Text-to-speech settings</string>
+    <string name="install_voice">Install</string>
+    <string name="sleep_timer">Sleep timer</string>
+    <string name="sleep_off">Off</string>
+    <string name="sleep_minutes">%1$d min</string>
+    <string name="sleep_set">Reading will stop in %1$d min</string>
+    <string name="sleep_active">Sleep timer: %1$d min left</string>
+    <string name="sleep_done">Sleep timer – paused</string>
+    <string name="notif_channel">Playback</string>
+    <string name="notif_page">Page %1$d of %2$d</string>
+    <string name="paused_unplugged">Headphones disconnected – paused</string>
+    <string name="finished">End of book</string>
+    <string name="err_tts_init">Text-to-speech engine could not be started. Install e.g. \"Speech Services by Google\".</string>
+    <string name="err_tts_speak">The speech engine keeps failing – playback stopped</string>
+    <string name="err_missing_lang">No voice installed for: %1$s</string>
+    <string name="err_no_text">This PDF contains no text (probably a scan). Scanned documents are not supported.</string>
+    <string name="err_password">This PDF is password-protected</string>
+    <string name="err_open">Could not open the file: %1$s</string>
+    <string name="err_focus">Audio is busy (e.g. a phone call)</string>
+</resources>

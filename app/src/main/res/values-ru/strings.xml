@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PDF Чтец</string>
+    <string name="open_pdf">Открыть PDF</string>
+    <string name="empty_hint">Откройте PDF-файл и слушайте его как аудиокнигу — даже с выключенным экраном.</string>
+    <string name="loading_pdf">Извлечение текста из PDF… %1$d%%</string>
+    <string name="page_info">Страница %1$d из %2$d · %3$d%%</string>
+    <string name="page_short">стр. %1$d</string>
+    <string name="progress">Прогресс</string>
+    <string name="play">Воспроизвести</string>
+    <string name="pause">Пауза</string>
+    <string name="previous">Предыдущее предложение</string>
+    <string name="next">Следующее предложение</string>
+    <string name="rewind">10 предложений назад</string>
+    <string name="forward">10 предложений вперёд</string>
+    <string name="speed">Скорость</string>
+    <string name="slower">Медленнее</string>
+    <string name="faster">Быстрее</string>
+    <string name="reading_language">Язык чтения:</string>
+    <string name="voice">Голос:</string>
+    <string name="voice_default">По умолчанию</string>
+    <string name="voice_online">онлайн</string>
+    <string name="lang_auto">Автоматически (%1$s)</string>
+    <string name="go_to_page">Перейти к странице</string>
+    <string name="page_number_hint">1–%1$d</string>
+    <string name="app_language">Язык приложения</string>
+    <string name="app_lang_system">Как в системе</string>
+    <string name="tts_settings">Настройки синтеза речи</string>
+    <string name="install_voice">Установить</string>
+    <string name="sleep_timer">Таймер сна</string>
+    <string name="sleep_off">Выключен</string>
+    <string name="sleep_minutes">%1$d мин</string>
+    <string name="sleep_set">Чтение остановится через %1$d мин</string>
+    <string name="sleep_active">Таймер сна: осталось %1$d мин</string>
+    <string name="sleep_done">Таймер сна — пауза</string>
+    <string name="notif_channel">Воспроизведение</string>
+    <string name="notif_page">Страница %1$d из %2$d</string>
+    <string name="paused_unplugged">Наушники отключены — пауза</string>
+    <string name="finished">Конец книги</string>
+    <string name="err_tts_init">Не удалось запустить синтез речи. Установите, например, «Распознавание и синтез речи Google».</string>
+    <string name="err_tts_speak">Синтезатор речи постоянно выдаёт ошибки — остановлено</string>
+    <string name="err_missing_lang">Не установлен голос для: %1$s</string>
+    <string name="err_no_text">В этом PDF нет текста (вероятно, скан). Сканы не поддерживаются.</string>
+    <string name="err_password">PDF защищён паролем</string>
+    <string name="err_open">Не удалось открыть файл: %1$s</string>
+    <string name="err_focus">Звук занят (например, идёт звонок)</string>
+</resources>
