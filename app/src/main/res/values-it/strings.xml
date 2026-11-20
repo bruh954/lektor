@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lettore PDF</string>
+    <string name="open_pdf">Apri PDF</string>
+    <string name="empty_hint">Apri un file PDF e ascoltalo come un audiolibro, anche a schermo spento.</string>
+    <string name="loading_pdf">Estrazione del testo dal PDF… %1$d%%</string>
+    <string name="page_info">Pagina %1$d di %2$d · %3$d%%</string>
+    <string name="page_short">p. %1$d</string>
+    <string name="progress">Avanzamento</string>
+    <string name="play">Riproduci</string>
+    <string name="pause">Pausa</string>
+    <string name="previous">Frase precedente</string>
+    <string name="next">Frase successiva</string>
+    <string name="rewind">Indietro di 10 frasi</string>
+    <string name="forward">Avanti di 10 frasi</string>
+    <string name="speed">Velocità</string>
+    <string name="slower">Più lento</string>
+    <string name="faster">Più veloce</string>
+    <string name="reading_language">Lingua di lettura:</string>
+    <string name="voice">Voce:</string>
+    <string name="voice_default">Predefinita</string>
+    <string name="voice_online">online</string>
+    <string name="lang_auto">Automatica (%1$s)</string>
+    <string name="go_to_page">Vai alla pagina</string>
+    <string name="page_number_hint">1–%1$d</string>
+    <string name="app_language">Lingua dell\'app</string>
+    <string name="app_lang_system">Lingua di sistema</string>
+    <string name="tts_settings">Impostazioni sintesi vocale</string>
+    <string name="install_voice">Installa</string>
+    <string name="sleep_timer">Timer di spegnimento</string>
+    <string name="sleep_off">Disattivato</string>
+    <string name="sleep_minutes">%1$d min</string>
+    <string name="sleep_set">La lettura si fermerà tra %1$d min</string>
+    <string name="sleep_active">Timer: mancano %1$d min</string>
+    <string name="sleep_done">Timer – lettura in pausa</string>
+    <string name="notif_channel">Riproduzione</string>
+    <string name="notif_page">Pagina %1$d di %2$d</string>
+    <string name="paused_unplugged">Cuffie scollegate – pausa</string>
+    <string name="finished">Fine del libro</string>
+    <string name="err_tts_init">Impossibile avviare la sintesi vocale. Installa un motore di sintesi vocale (ad es. RHVoice o quello di Google).</string>
+    <string name="err_tts_speak">Il motore vocale continua a dare errori – lettura interrotta</string>
+    <string name="err_missing_lang">Nessuna voce installata per: %1$s</string>
+    <string name="err_no_text">Questo PDF non contiene testo (probabilmente è una scansione). I documenti scansionati non sono supportati.</string>
+    <string name="err_password">Questo PDF è protetto da password</string>
+    <string name="err_open">Impossibile aprire il file: %1$s</string>
+    <string name="err_focus">L\'audio è occupato (ad es. una chiamata in corso)</string>
+</resources>

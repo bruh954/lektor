@@ -316,7 +316,7 @@ class MainActivity : AppCompatActivity() {
         val key = "${st.bookId}|${st.langSetting}|${st.effectiveLang}|${AppCompatDelegate.getApplicationLocales().toLanguageTags()}"
         if (key != langListKey) {
             langListKey = key
-            val preferred = listOf("pl-PL", "en-US", "en-GB", "ru-RU", "uk-UA", "de-DE")
+            val preferred = listOf("pl-PL", "en-US", "en-GB", "ru-RU", "fr-FR", "it-IT", "uk-UA", "de-DE")
             val available = s.availableLocales().map { it.toLanguageTag() }
             val tags = ArrayList<String>()
             tags += ReaderService.LANG_AUTO
@@ -437,8 +437,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showAppLanguage() {
-        val tags = arrayOf("", "pl", "en", "ru")
-        val labels = arrayOf(getString(R.string.app_lang_system), "Polski", "English", "Русский")
+        val tags = arrayOf("", "pl", "en", "ru", "fr", "it")
+        val labels = arrayOf(getString(R.string.app_lang_system), "Polski", "English", "Русский", "Français", "Italiano")
         val current = AppCompatDelegate.getApplicationLocales().toLanguageTags()
         val checked = tags.indexOfFirst { it.isNotEmpty() && current.startsWith(it) }.let { if (it < 0) 0 else it }
         MaterialAlertDialogBuilder(this)

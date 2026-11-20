@@ -96,38 +96,55 @@ object TextChunker {
     }
 }
 
-/** Proste rozpoznawanie języka po charakterystycznych literach. */
+/** Rozpoznawanie języka: alfabet (cyrylica) + najczęstsze słowa + charakterystyczne litery. */
 object LanguageDetector {
+    private val stopwords: Map<String, Set<String>> = mapOf(
+        "pl-PL" to setOf("i", "w", "na", "nie", "się", "z", "że", "do", "to", "jest", "jak", "ale", "co", "o", "od", "po", "tak", "dla", "przez", "czy", "jego", "który", "była", "był"),
+        "en-US" to setOf("the", "and", "of", "to", "in", "is", "that", "it", "was", "for", "with", "as", "his", "he", "on", "be", "at", "by", "this", "had", "not", "are", "but", "from"),
+        "fr-FR" to setOf("le", "la", "les", "de", "des", "et", "est", "un", "une", "du", "que", "qui", "dans", "pour", "pas", "sur", "au", "il", "elle", "ne", "se", "ce", "avec", "son", "mais", "nous", "vous"),
+        "it-IT" to setOf("il", "lo", "la", "gli", "le", "di", "che", "e", "è", "un", "una", "non", "per", "del", "della", "con", "si", "sono", "da", "nel", "alla", "ma", "come", "anche", "più", "questo"),
+        "de-DE" to setOf("der", "die", "das", "und", "ist", "nicht", "ein", "eine", "zu", "den", "mit", "sich", "auf", "für", "von", "dem", "im", "auch", "es", "ich", "wie"),
+        "es-ES" to setOf("el", "la", "los", "las", "de", "que", "y", "en", "un", "una", "es", "por", "con", "para", "no", "se", "del", "al", "lo", "como", "pero", "más"),
+        "cs-CZ" to setOf("a", "je", "v", "se", "na", "že", "to", "s", "z", "do", "jsem", "jak", "ale", "není", "jsou", "který", "jeho", "ve", "byl", "aby")
+    )
+
+    private val letters: Map<Char, String> = buildMap {
+        "ąćęłńśźż".forEach { put(it, "pl-PL") }
+        "řěůťďň".forEach { put(it, "cs-CZ") }
+        "äöüß".forEach { put(it, "de-DE") }
+        "çêâîœëûÿ".forEach { put(it, "fr-FR") }
+        "ìò".forEach { put(it, "it-IT") }
+        "ñ¿¡".forEach { put(it, "es-ES") }
+    }
+
     fun detect(sample: String): Locale {
-        var letters = 0
+        var letterCount = 0
         var cyr = 0
         var ukr = 0
-        val scores = HashMap<String, Int>()
-        fun add(k: String) { scores[k] = (scores[k] ?: 0) + 1 }
+        val scores = HashMap<String, Double>()
         for (ch in sample) {
-            if (!ch.isLetter()) continue
-            letters++
+            if (!ch.isLetter() && ch != '¿' && ch != '¡') continue
+            letterCount++
             val c = ch.lowercaseChar()
-            if (c in 'Ѐ'..'ӿ') {
+            if (c in '\u0400'..'\u04FF') {
                 cyr++
                 if (c == 'і' || c == 'ї' || c == 'є' || c == 'ґ') ukr++
                 continue
             }
-            when (c) {
-                'ą', 'ć', 'ę', 'ł', 'ń', 'ś', 'ź', 'ż' -> add("pl-PL")
-                'ř', 'ě', 'ů', 'ť', 'ď', 'ň' -> add("cs-CZ")
-                'ä', 'ö', 'ü', 'ß' -> add("de-DE")
-                'è', 'ê', 'à', 'ç', 'ù', 'â', 'î', 'œ', 'ë' -> add("fr-FR")
-                'ñ', 'í', 'ú', 'á' -> add("es-ES")
-            }
+            letters[c]?.let { scores[it] = (scores[it] ?: 0.0) + 3.0 }
         }
-        if (letters == 0) return Locale.getDefault()
-        if (cyr * 100 / letters > 30) {
+        if (letterCount == 0) return Locale.getDefault()
+        if (cyr * 100 / letterCount > 30) {
             return if (ukr * 1000 / cyr.coerceAtLeast(1) > 5) Locale.forLanguageTag("uk-UA")
             else Locale.forLanguageTag("ru-RU")
         }
-        val best = scores.maxByOrNull { it.value }
-        if (best != null && best.value * 1000 / letters >= 3) return Locale.forLanguageTag(best.key)
-        return Locale.forLanguageTag("en-US")
+        val words = sample.lowercase().split(Regex("[^\\p{L}]+")).filter { it.isNotEmpty() }
+        for (w in words) {
+            for ((lang, set) in stopwords) {
+                if (w in set) scores[lang] = (scores[lang] ?: 0.0) + 1.0
+            }
+        }
+        val best = scores.maxByOrNull { it.value } ?: return Locale.forLanguageTag("en-US")
+        return Locale.forLanguageTag(best.key)
     }
 }

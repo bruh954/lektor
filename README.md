@@ -7,8 +7,8 @@ Aplikacja na Androida, która czyta pliki PDF na głos jak audiobook.
 - **Działa jak odtwarzacz muzyki** – czyta przy wyłączonym ekranie i w tle, ma sterowanie z ekranu blokady, z powiadomienia, ze słuchawek, z zegarka i z Androida Auto.
 - **Pauza po odłączeniu słuchawek** (przewodowych i Bluetooth) oraz podczas rozmowy telefonicznej (po rozmowie wznawia).
 - **Tempo od 0,5× do 4×**: suwak, przyciski ± i szybkie przyciski 1× / 1,5× / 2× / 3× / 4×.
-- **Języki lektora**: polski, angielski, rosyjski, ukraiński, niemiecki i każdy inny, który obsługuje syntezator w telefonie. Język książki rozpoznaje się automatycznie, a dla każdej książki można go zmienić ręcznie i wybrać głos.
-- **Język aplikacji**: polski, angielski, rosyjski (menu → Język aplikacji).
+- **Języki lektora**: polski, angielski, rosyjski, francuski, włoski, ukraiński, niemiecki i każdy inny, który obsługuje syntezator w telefonie. Język książki rozpoznaje się automatycznie, a dla każdej książki można go zmienić ręcznie i wybrać głos.
+- **Język aplikacji**: polski, angielski, rosyjski, francuski, włoski (menu → Język aplikacji).
 - Zapamiętuje miejsce w każdej książce i po uruchomieniu wraca do ostatniej.
 - Bieżące zdanie jest podświetlone; dotknięcie zdania zaczyna czytanie od niego.
 - Przejście do strony, przewijanie co zdanie albo co 10 zdań, wyłącznik czasowy.
